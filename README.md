@@ -27,6 +27,17 @@ pip install action-lipo
    - Visualize lipo:
        [lipo_visualization.ipynb](lipo_visualization.ipynb)
 
+   - Benchmark:
+       ```
+       python lipo_benchmark.py --save media/lipo_benchmark.png
+       ```
+
+   ![lipo benchmark](media/lipo_benchmark.png)
+   | Implementation | Avg [ms] | Std [ms] | Mean \|Δ\| vs LiPo | Max \|Δ\| vs LiPo |
+   | --- | ---: | ---: | ---: | ---: |
+   | LiPo | 7.207 | 1.112 | 0.000000 | 0.000000 |
+   | OSQP QP ⚡ | 0.553 | 0.119 | 0.000740 | 0.005626 |
+
 ## ROS 2 Integration
 LiPo can also be used within ROS 2 pipelines.
 See: https://github.com/lab-dream/lipo_ros2
